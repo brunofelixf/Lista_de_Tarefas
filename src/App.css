@@ -8,3 +8,6 @@
   overflow: auto;
   background-color: #222;
 }
+.addContainer {
+  display: flex;
+}
