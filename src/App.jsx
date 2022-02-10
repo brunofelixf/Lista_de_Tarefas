@@ -12,7 +12,9 @@ function App() {
       <div className="container">
         <div className="addContainer">
           <Input></Input>
-          <Button>Adicionar</Button>
+          <div className="btnContainer">
+            <Button>Adicionar</Button>
+          </div>
         </div>
         <tarefas></tarefas>
       </div>

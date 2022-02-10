@@ -5,4 +5,6 @@ input {
   font-size: 16px;
   border: none;
   border-radius: 10px;
+  flex: 2;
+  box-shadow: inset -4px -6px 12px #1a191991, inset 5px 5px 12px rgb(0 0 0 /16%);
 }
