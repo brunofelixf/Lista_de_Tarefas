@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './components/Button'
-import Input from './components/Input';
+import Input from './components/Input'
+import Task from './components/Task'
 
 import './App.css'
 ;
@@ -16,7 +17,9 @@ function App() {
             <Button>Adicionar</Button>
           </div>
         </div>
-        <tarefas></tarefas>
+        <div className="tskContainer">
+        <Task></Task>
+        </div>
       </div>
     </>
   )
