@@ -4,7 +4,9 @@ import './Task.css'
 const Tarefas = () => {
   return ( 
     <>
-    <p>Teste</p>
+    <div className="tskContainer">
+      <p>Teste</p>
+    </div>
     </>
    );
 }

@@ -18,3 +18,7 @@ button:hover {
   background-color: white;
   color: #222;
 }
+.btnContainer {
+  margin-left: 10px;
+  flex: 1;
+}

@@ -10,16 +10,12 @@ import './App.css'
 function App() {
   return (
     <>
-      <div className="container">
+      <div div className="container">
         <div className="addContainer">
-          <Input></Input>
-          <div className="btnContainer">
-            <Button>Adicionar</Button>
-          </div>
+          <Input />
+          <Button>Adicionar</Button>
         </div>
-        <div className="tskContainer">
-        <Task></Task>
-        </div>
+          <Task />
       </div>
     </>
   )

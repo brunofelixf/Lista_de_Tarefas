@@ -3,7 +3,9 @@ import './Button.css'
 
 const Button = ({children}) => {
   return ( 
-    <button>{children}</button>
+    <div className="btnContainer">
+      <button>{children}</button>
+    </div>
   );
 }
  

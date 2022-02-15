@@ -13,19 +13,3 @@
   display: flex;
   margin: 15px 15px;
 }
-.btnContainer {
-  margin-left: 10px;
-  flex: 1;
-}
-.tskContainer {
-  margin: 15px 15px;
-  display: flex;
-  background-color: rgb(54, 52, 52);
-  border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 15px 15px;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: inset 5px 5px 12px #222, 5px 5px 12px rgba(0, 0, 0, 0.16);
-}
