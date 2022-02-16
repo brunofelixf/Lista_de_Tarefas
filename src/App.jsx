@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import Button from './components/Button'
 import Input from './components/Input'
-import Task from './components/Task'
+import Tasks from './components/Tasks'
 
 import './App.css'
 
 
 function App() {
 
-  const [tasks, setTasks] = useState('Teste 1')
+  const [tasks, setTasks] = useState([{title: 'Teste 1'},{title:'teste 2'}])
   const [inputData, setInputData] = useState('')
 
   const handleAdd = (task) => {
@@ -27,7 +27,7 @@ function App() {
           <Input inputData={inputData} setInputData={setInputData}/>
           <Button handleAdd={handleAdd} inputData={inputData} setImputData={setInputData}>Adicionar</Button>
         </div>
-          <Task task={tasks}></Task>
+          <Tasks tasks={tasks}></Tasks>
       </div>
     </>
   )

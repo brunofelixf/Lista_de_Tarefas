@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import './Task.css'
 
 const Task = ({task}) => {
   return ( 
     <>
     <div className="tskContainer">
-      <p>{task}</p>
+      <p>{task.title}</p>
     </div>
     </>
    );
