@@ -11,14 +11,16 @@ const App = () => {
   const [tasks, setTasks] = useState([
     {
       title: 'Teste 1',
-      id: '1'
+      id: '1',
+      check: true
     },
     {
       title:'teste 2',
-      id: '2'
+      id: '2',
+      check: false
     }])
   
-    const [inputData, setInputData] = useState('')
+  const [inputData, setInputData] = useState('')
 
   const handleDel = (taskId) => {
     const newTasks = tasks.filter((task) => task.id !== taskId)
@@ -31,11 +33,24 @@ const App = () => {
       ...tasks,
       {
         title: task,
-        id: Math.random()*10
+        id: Math.random()*10,
+        check: false
       }
     ]
     setTasks(newTasks)
   }
+
+  const handleCheck = (taskId) => {
+    const newTasks = tasks.map( (task) => {
+      if (task.id === taskId){
+        return {...task, check: !task.check
+        }
+      }
+      return task
+    })
+    setTasks(newTasks)
+  }
+
   return (
     <>
       <div div className="container">
@@ -52,7 +67,8 @@ const App = () => {
         </div>
           <Tasks 
             tasks={tasks} 
-            handleDel={handleDel}>
+            handleDel={handleDel}
+            handleCheck={handleCheck}>
           </Tasks>
       </div>
     </>

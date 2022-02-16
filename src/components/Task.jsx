@@ -1,11 +1,13 @@
 import React from 'react'
 import './Task.css'
 
-const Task = ({task, handleDel}) => {
+const Task = ({task, handleDel, handleCheck}) => {
   return ( 
     <>
-    <div className="tskContainer">
-      <div>
+    <div 
+      className="tskContainer"
+      style={ task.check ? { borderLeft: '12px solid chartreuse'}: {} }>
+      <div onClick={() => handleCheck(task.id)}>
        {task.title}
       </div>
       <div>
