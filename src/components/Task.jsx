@@ -1,7 +1,7 @@
 import React from 'react'
 import './Task.css'
 
-const Task = ({task}) => {
+const Task = ({task, handleDel}) => {
   return ( 
     <>
     <div className="tskContainer">
@@ -9,7 +9,7 @@ const Task = ({task}) => {
        {task.title}
       </div>
       <div>
-        <button>X</button>
+        <button onClick={() => handleDel(task.id)}>X</button>
       </div>
     </div>
     </>

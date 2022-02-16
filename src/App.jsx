@@ -6,16 +6,32 @@ import Tasks from './components/Tasks'
 import './App.css'
 
 
-function App() {
+const App = () => {
 
-  const [tasks, setTasks] = useState([{title: 'Teste 1'},{title:'teste 2'}])
-  const [inputData, setInputData] = useState('')
+  const [tasks, setTasks] = useState([
+    {
+      title: 'Teste 1',
+      id: '1'
+    },
+    {
+      title:'teste 2',
+      id: '2'
+    }])
+  
+    const [inputData, setInputData] = useState('')
+
+  const handleDel = (taskId) => {
+    const newTasks = tasks.filter((task) => task.id !== taskId)
+    
+    setTasks(newTasks)
+  }
 
   const handleAdd = (task) => {
     const newTasks = [
       ...tasks,
       {
-        title: task
+        title: task,
+        id: 'Math.random()*10'
       }
     ]
     setTasks(newTasks)
@@ -24,10 +40,20 @@ function App() {
     <>
       <div div className="container">
         <div className="addContainer">
-          <Input inputData={inputData} setInputData={setInputData}/>
-          <Button handleAdd={handleAdd} inputData={inputData} setImputData={setInputData}>Adicionar</Button>
+          <Input 
+            inputData={inputData} 
+            setInputData={setInputData}/>
+          <Button 
+            handleAdd={handleAdd} 
+            inputData={inputData} 
+            setImputData={setInputData}>
+              Adicionar
+          </Button>
         </div>
-          <Tasks tasks={tasks}></Tasks>
+          <Tasks 
+            tasks={tasks} 
+            handleDel={handleDel}>
+          </Tasks>
       </div>
     </>
   )
