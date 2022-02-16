@@ -5,7 +5,12 @@ const Task = ({task}) => {
   return ( 
     <>
     <div className="tskContainer">
-      <p>{task.title}</p>
+      <div>
+       {task.title}
+      </div>
+      <div>
+        <button>X</button>
+      </div>
     </div>
     </>
    );
