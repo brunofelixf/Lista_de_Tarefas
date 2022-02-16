@@ -31,7 +31,7 @@ const App = () => {
       ...tasks,
       {
         title: task,
-        id: 'Math.random()*10'
+        id: Math.random()*10
       }
     ]
     setTasks(newTasks)
