@@ -9,7 +9,7 @@ import './App.css'
 const App = () => {
 
   const [tasks, setTasks] = useState([
-    {
+    /*{
       title: 'Teste 1',
       id: '1',
       check: true
@@ -18,7 +18,8 @@ const App = () => {
       title:'teste 2',
       id: '2',
       check: false
-    }])
+    }*/
+  ])
   
   const [inputData, setInputData] = useState('')
   
@@ -60,7 +61,7 @@ const App = () => {
           <Button 
             handleAdd={handleAdd} 
             inputData={inputData} 
-            setImputData={setInputData}>
+            setInputData={setInputData}>
               Adicionar
           </Button>
         </div>

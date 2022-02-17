@@ -11,7 +11,7 @@ const Input = ({inputData, setInputData}) => {
     console.log(inputData)
   }
   return ( 
-    <input onChange={handleInput} type="text"></input>
+    <input onChange={handleInput} type="text" value={inputData}></input>
    );
 }
  

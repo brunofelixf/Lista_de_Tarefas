@@ -1,12 +1,12 @@
 import React from 'react';
 import './Button.css'
 
-const Button = ({children, handleAdd, inputData, setImputData}) => {
+const Button = ({children, handleAdd, inputData, setInputData}) => {
 
   const handleClick = () => {
-    handleAdd(inputData)
-    setImputData('')
-  }
+    handleAdd(inputData);
+    setInputData("");
+  };
 
   return ( 
     <div className="btnContainer">

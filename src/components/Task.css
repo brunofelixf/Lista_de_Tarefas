@@ -5,6 +5,7 @@
 .tskContainer {
   margin: 15px 15px;
   display: flex;
+  font-size: 16px;
   background-color: rgb(54, 52, 52);
   border: none;
   border-radius: 5px;

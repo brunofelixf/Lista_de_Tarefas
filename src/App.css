@@ -1,10 +1,10 @@
 .container {
-  max-width: 720px;
-  height: 1080px;
+  width: 390px;
+  height: 890px;
   color: white;
   border: none;
   border-radius: 10px;
-  margin: 30px auto;
+  margin-top: 15px auto;
   overflow: auto;
   background-color: #222;
   box-shadow: inset 5px 5px 12px #222, 5px 5px 12px rgba(0, 0, 0, 0.16);
