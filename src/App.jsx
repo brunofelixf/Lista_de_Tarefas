@@ -21,6 +21,16 @@ const App = () => {
     }])
   
   const [inputData, setInputData] = useState('')
+  
+  const handleCheck = (taskId) => {
+    const newTasks = tasks.map( (task) => {
+      if (task.id === taskId){
+        return { ...task, check: !task.check }
+      }
+      return task
+    })
+    setTasks(newTasks)
+  }
 
   const handleDel = (taskId) => {
     const newTasks = tasks.filter((task) => task.id !== taskId)
@@ -37,17 +47,6 @@ const App = () => {
         check: false
       }
     ]
-    setTasks(newTasks)
-  }
-
-  const handleCheck = (taskId) => {
-    const newTasks = tasks.map( (task) => {
-      if (task.id === taskId){
-        return {...task, check: !task.check
-        }
-      }
-      return task
-    })
     setTasks(newTasks)
   }
 

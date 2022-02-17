@@ -1,7 +1,7 @@
 import React from 'react'  
 import Task from './Task'
 
-const Tasks = ({tasks, handleDel}) => {
+const Tasks = ({tasks, handleDel, handleCheck}) => {
   return ( 
     <>
     {
@@ -9,6 +9,7 @@ const Tasks = ({tasks, handleDel}) => {
         <Task 
           task={task}  
           handleDel={handleDel}
+          handleCheck={handleCheck}
         />
       ))
     }

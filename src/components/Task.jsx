@@ -6,9 +6,15 @@ const Task = ({task, handleDel, handleCheck}) => {
     <>
     <div 
       className="tskContainer"
-      style={ task.check ? { borderLeft: '12px solid chartreuse'}: {} }>
-      <div onClick={() => handleCheck(task.id)}>
-       {task.title}
+      style={ task.check ? 
+        { 
+        borderLeft: '12px solid chartreuse',
+        color: "black"
+        }: {} }>
+      <div 
+        className= "tskTitle" 
+        onClick={() => handleCheck(task.id)}>
+        {task.title}
       </div>
       <div>
         <button onClick={() => handleDel(task.id)}>X</button>
