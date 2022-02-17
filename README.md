@@ -3,6 +3,12 @@
 App web de lista de tarefas, implementado para praticar
 os fundamentos do React, Javascript, CSS e HTML.
 
+Nele é possível:
+
+- Adicionar tarefas;
+- Marcar como concluída;
+- Remover tarefas.
+
 ![alt_text](https://github.com/brunofelixf/lista_de_tarefas/blob/main/Lista.png?raw=true)
 
 ### `npm start`
