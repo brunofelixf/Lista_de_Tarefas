@@ -1,7 +1,13 @@
 # Lista de Tarefas React
 
 App web de lista de tarefas, implementado para praticar
-os fundamentos do React, Javascript, CSS e HTML.
+os fundamentos do React, como:
+
+- Componentização;
+- Hooks;
+- Context API.
+
+ALém das linguagens Javascript, CSS e HTML.
 
 Nele é possível:
 
