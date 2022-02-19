@@ -1,78 +1,33 @@
-import React, { useState } from 'react'
-import Button from './components/Button'
-import Input from './components/Input'
-import Tasks from './components/Tasks'
+import React from 'react';
 
-import './App.css'
+import Button from './components/Button';
+import Input from './components/Input';
+import Tasks from './components/Tasks';
 
+import './App.css';
+
+import TaskProvider from './context/TaskContext';
+import InputProvider from './context/InputContext';
 
 const App = () => {
-
-  const [tasks, setTasks] = useState([
-    /*{
-      title: 'Teste 1',
-      id: '1',
-      check: true
-    },
-    {
-      title:'teste 2',
-      id: '2',
-      check: false
-    }*/
-  ])
-  
-  const [inputData, setInputData] = useState('')
-  
-  const handleCheck = (taskId) => {
-    const newTasks = tasks.map( (task) => {
-      if (task.id === taskId){
-        return { ...task, check: !task.check }
-      }
-      return task
-    })
-    setTasks(newTasks)
-  }
-
-  const handleDel = (taskId) => {
-    const newTasks = tasks.filter((task) => task.id !== taskId)
-    
-    setTasks(newTasks)
-  }
-
-  const handleAdd = (task) => {
-    const newTasks = [
-      ...tasks,
-      {
-        title: task,
-        id: Math.random()*10,
-        check: false
-      }
-    ]
-    setTasks(newTasks)
-  }
 
   return (
     <>
       <div div className="container">
-        <div className="addContainer">
-          <Input 
-            inputData={inputData} 
-            setInputData={setInputData}/>
-          <Button 
-            handleAdd={handleAdd} 
-            inputData={inputData} 
-            setInputData={setInputData}>
-              Adicionar
-          </Button>
-        </div>
-          <Tasks 
-            tasks={tasks} 
-            handleDel={handleDel}
-            handleCheck={handleCheck}>
-          </Tasks>
+        <TaskProvider>
+          <InputProvider> 
+           <div className="addContainer">
+              <Input />
+              <Button>
+                Adicionar
+              </Button>
+           </div>
+          </InputProvider>
+          <Tasks/>
+        </TaskProvider>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

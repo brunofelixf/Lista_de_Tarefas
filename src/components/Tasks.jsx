@@ -1,15 +1,19 @@
-import React from 'react'  
-import Task from './Task'
+import React from 'react'; 
 
-const Tasks = ({tasks, handleDel, handleCheck}) => {
+import { useTasks } from '../context/TaskContext';
+
+import Task from './Task';
+
+const Tasks = () => {
+
+  const { tasks } = useTasks();
+
   return ( 
     <>
     {
       tasks.map(task => (
         <Task 
-          task={task}  
-          handleDel={handleDel}
-          handleCheck={handleCheck}
+          task={task}
         />
       ))
     }

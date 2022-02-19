@@ -1,7 +1,28 @@
-import React from 'react'
-import './Task.css'
+import React from 'react';
+import './Task.css';
+import { useTasks } from '../context/TaskContext';
 
-const Task = ({task, handleDel, handleCheck}) => {
+
+const Task = ({task}) => {
+ 
+  const { tasks, setTasks} = useTasks();
+
+  const handleCheck = (taskId) => {
+    const newTasks = tasks.map( (task) => {
+      if (task.id === taskId){
+        return { ...task, check: !task.check }
+      }
+      return task
+    })
+    setTasks(newTasks)
+  }
+
+  const handleDel = (taskId) => {
+    const newTasks = tasks.filter((task) => task.id !== taskId)
+    
+    setTasks(newTasks)
+  }
+
   return ( 
     <>
     <div 

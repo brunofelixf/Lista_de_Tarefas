@@ -1,7 +1,26 @@
 import React from 'react';
-import './Button.css'
 
-const Button = ({children, handleAdd, inputData, setInputData}) => {
+import './Button.css';
+
+import { useInput } from '../context/InputContext';
+import { useTasks } from '../context/TaskContext';
+
+const Button = ({children}) => {
+
+  const { inputData, setInputData } = useInput();
+  const { tasks, setTasks } = useTasks();
+
+  const handleAdd = (task) => {
+    const newTasks = [
+      ...tasks,
+      {
+        title: task,
+        id: Math.random()*10,
+        check: false
+      }
+    ]
+    setTasks(newTasks)
+  }
 
   const handleClick = () => {
     handleAdd(inputData);
