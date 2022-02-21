@@ -15,7 +15,7 @@ Nele é possível:
 - Marcar como concluída;
 - Remover tarefas.
 
-![alt_text](https://github.com/brunofelixf/lista_de_tarefas/blob/main/Lista.png?raw=true)
+![alt_text](https://github.com/brunofelixf/lista_de_tarefas/blob/main/lt.png?raw=true)
 
 ### `npm start`
 
